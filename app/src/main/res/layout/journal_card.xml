@@ -37,7 +37,7 @@
             android:layout_height="wrap_content"
             android:layout_alignParentRight="true"
             android:src="@android:drawable/ic_menu_share"
-            tools:ignore="RtlHardcoded" />
+            tools:ignore="ContentDescription,RtlHardcoded" />
     </RelativeLayout>
 
     <RelativeLayout
