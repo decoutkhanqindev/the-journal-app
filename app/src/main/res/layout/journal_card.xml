@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     app:cardCornerRadius="20dp">
@@ -8,16 +9,17 @@
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:padding="5dp"
         android:gravity="start"
-        android:orientation="horizontal">
+        android:orientation="horizontal"
+        android:padding="5dp">
 
         <TextView
             android:id="@+id/journal_user_id"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="User Id"
-            android:textSize="20sp" />
+            android:textSize="20sp"
+            tools:ignore="HardcodedText" />
 
         <TextView
             android:id="@+id/journal_user_name"
@@ -26,58 +28,64 @@
             android:layout_marginStart="20dp"
             android:layout_toRightOf="@id/journal_user_id"
             android:text="User Name"
-            android:textSize="20dp" />
+            android:textSize="20dp"
+            tools:ignore="HardcodedText,RtlHardcoded,SpUsage" />
 
         <ImageView
             android:id="@+id/share_btn"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_alignParentRight="true"
-            android:src="@android:drawable/ic_menu_share" />
+            android:src="@android:drawable/ic_menu_share"
+            tools:ignore="RtlHardcoded" />
     </RelativeLayout>
 
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:padding="5dp"
+        android:layout_marginTop="35dp"
         android:gravity="start"
-        android:layout_marginTop="35dp">
+        android:padding="5dp">
 
         <TextView
             android:id="@+id/journal_title"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="Title"
-            android:textSize="20sp"/>
+            android:textSize="20sp"
+            tools:ignore="HardcodedText" />
 
         <ImageView
             android:id="@+id/journal_img_url"
             android:layout_width="match_parent"
-            android:layout_marginTop="10dp"
             android:layout_height="wrap_content"
+            android:layout_below="@id/journal_title"
+            android:layout_marginTop="10dp"
             android:adjustViewBounds="true"
             android:cropToPadding="true"
             android:scaleType="fitXY"
-            android:layout_below="@id/journal_title"
-            android:src="@drawable/ic_launcher_background" />
+            android:src="@drawable/ic_launcher_background"
+            tools:ignore="ContentDescription" />
 
         <TextView
             android:id="@+id/journal_description"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:layout_below="@id/journal_img_url"
+            android:layout_marginTop="10dp"
             android:text="Description..."
             android:textSize="20sp"
-            android:layout_marginTop="10dp"
-            android:layout_below="@id/journal_img_url" />
+            tools:ignore="HardcodedText" />
 
         <TextView
             android:id="@+id/journal_time_added"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:layout_below="@id/journal_description"
             android:layout_marginTop="10dp"
             android:text="Time added"
+            android:textSize="20sp"
             android:textStyle="italic"
-            android:layout_below="@id/journal_description"
-            android:textSize="20sp"/>
+            tools:ignore="HardcodedText" />
     </RelativeLayout>
 </androidx.cardview.widget.CardView>
