@@ -25,6 +25,7 @@
         tools:ignore="HardcodedText" />
 
     <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/journal_list_recyclerView"
         android:layout_width="0dp"
         android:layout_height="0dp"
         android:layout_margin="5dp"
