@@ -41,7 +41,7 @@ public class JournalAdapter extends RecyclerView.Adapter<JournalAdapter.JournalV
         holder.title.setText(journal.getTitle());
 
         String imgUrl = journal.getImgUrl();
-        Glide.with(context).load(imgUrl).fitCenter().load(holder.imgUrl);
+        Glide.with(context).load(imgUrl).fitCenter().into(holder.imgUrl);
 
         holder.description.setText(journal.getDescription());
 
