@@ -4,7 +4,6 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:layout_margin="10dp"
     android:background="@color/cardview_shadow_start_color"
     app:cardCornerRadius="20dp">
 
@@ -12,7 +11,6 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:gravity="start"
-        android:layout_margin="10dp"
         android:orientation="horizontal"
         android:padding="5dp">
 
@@ -48,7 +46,6 @@
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="35dp"
         android:gravity="start"
         android:padding="5dp">
 
@@ -56,7 +53,6 @@
             android:id="@+id/journal_title"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_margin="10dp"
             android:text="Title"
             android:textSize="20sp"
             tools:ignore="HardcodedText" />
@@ -67,7 +63,6 @@
             android:layout_height="wrap_content"
             android:layout_below="@id/journal_title"
             android:layout_marginTop="10dp"
-            android:layout_margin="10dp"
             android:adjustViewBounds="true"
             android:cropToPadding="true"
             android:scaleType="fitXY"
@@ -79,7 +74,6 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_below="@id/journal_img_url"
-            android:layout_margin="10dp"
             android:layout_marginTop="10dp"
             android:text="Description..."
             android:textSize="20sp"
@@ -88,7 +82,6 @@
         <TextView
             android:id="@+id/journal_time_added"
             android:layout_width="match_parent"
-            android:layout_margin="10dp"
             android:layout_height="wrap_content"
             android:layout_below="@id/journal_description"
             android:layout_marginTop="10dp"

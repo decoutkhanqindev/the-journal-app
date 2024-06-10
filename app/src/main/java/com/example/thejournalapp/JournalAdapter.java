@@ -63,8 +63,13 @@ public class JournalAdapter extends RecyclerView.Adapter<JournalAdapter.JournalV
     }
 
     public static class JournalViewHolder extends RecyclerView.ViewHolder {
-        private TextView userId, userName, title, description, timeAdded;
-        private ImageView shareBtn, imgUrl;
+        private final TextView userId;
+        private final TextView userName;
+        private final TextView title;
+        private final TextView description;
+        private final TextView timeAdded;
+        private final ImageView shareBtn;
+        private final ImageView imgUrl;
 
         public JournalViewHolder(@NonNull View itemView) {
             super(itemView);

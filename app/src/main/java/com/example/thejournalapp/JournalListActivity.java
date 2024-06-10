@@ -39,8 +39,8 @@ public class JournalListActivity extends AppCompatActivity {
     private FirebaseUser currentUser;
 
     // firebase firestore
-    private FirebaseFirestore db = FirebaseFirestore.getInstance();
-    private CollectionReference collectionReference = db.collection("Journal");
+    private final FirebaseFirestore db = FirebaseFirestore.getInstance();
+    private final CollectionReference collectionReference = db.collection("Journal");
 
     // firebase storage
     private StorageReference storageReference;
