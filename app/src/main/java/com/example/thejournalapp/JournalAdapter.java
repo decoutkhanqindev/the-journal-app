@@ -14,7 +14,10 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import com.bumptech.glide.Glide;
 
+import java.text.SimpleDateFormat;
 import java.util.ArrayList;
+import java.util.Date;
+import java.util.Locale;
 
 public class JournalAdapter extends RecyclerView.Adapter<JournalAdapter.JournalViewHolder> {
     Context context;
@@ -46,11 +49,13 @@ public class JournalAdapter extends RecyclerView.Adapter<JournalAdapter.JournalV
 
             holder.description.setText(journal.getDescription());
 
-            String timeAgo = String.valueOf(DateUtils.getRelativeTimeSpanString(journal.getTimeAdded().getSeconds() * 1000));
-            holder.timeAdded.setText(timeAgo);
+//            String timeAgo = String.valueOf(DateUtils.getRelativeTimeSpanString(journal.getTimeAdded().getSeconds() * 1000));
+            Date date = journal.getTimeAdded().toDate();
+            SimpleDateFormat simpleDateFormat = new SimpleDateFormat("dd/MM/yyyy", Locale.getDefault());
+            String timeAdded = simpleDateFormat.format(date);
+            holder.timeAdded.setText(timeAdded);
         }
     }
-
 
     @Override
     public int getItemCount() {
