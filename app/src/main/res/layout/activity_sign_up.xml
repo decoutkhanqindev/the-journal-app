@@ -13,7 +13,6 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="164dp"
-        android:layout_marginBottom="165dp"
         android:gravity="center"
         android:text="Sign up an account"
         android:textColor="@color/white"
@@ -23,7 +22,7 @@
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        tools:ignore="HardcodedText" />
+        tools:ignore="HardcodedText,TextContrastCheck" />
 
     <AutoCompleteTextView
         android:id="@+id/sign_up_email"
@@ -40,7 +39,7 @@
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/sign_up_title"
-        tools:ignore="HardcodedText,LabelFor,MissingConstraints" />
+        tools:ignore="HardcodedText,LabelFor,MissingConstraints,VisualLintTextFieldSize" />
 
     <EditText
         android:id="@+id/sign_up_pwd"
@@ -57,9 +56,11 @@
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/sign_up_email"
-        tools:ignore="Autofill,HardcodedText" />
+        tools:ignore="Autofill,HardcodedText,VisualLintTextFieldSize" />
+
 
     <EditText
+        android:inputType="text"
         android:id="@+id/sign_up_username"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -70,7 +71,8 @@
         android:textColor="@color/white"
         android:textSize="20sp"
         app:layout_constraintTop_toBottomOf="@+id/sign_up_pwd"
-        tools:layout_editor_absoluteX="0dp" />
+        tools:layout_editor_absoluteX="0dp"
+        tools:ignore="Autofill,HardcodedText,VisualLintTextFieldSize" />
 
     <Button
         android:id="@+id/sign_up_btn"
@@ -83,5 +85,5 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/sign_up_username"
-        tools:ignore="HardcodedText" />
+        tools:ignore="HardcodedText,TextContrastCheck" />
 </androidx.constraintlayout.widget.ConstraintLayout>
