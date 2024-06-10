@@ -36,18 +36,21 @@ public class JournalAdapter extends RecyclerView.Adapter<JournalAdapter.JournalV
     @Override
     public void onBindViewHolder(@NonNull JournalAdapter.JournalViewHolder holder, int position) {
         Journal journal = journalArrayList.get(position);
-        holder.userId.setText(journal.getUserId());
-        holder.userName.setText(journal.getUserName());
-        holder.title.setText(journal.getTitle());
+        if (journal != null){
+            holder.userId.setText(journal.getUserId());
+            holder.userName.setText(journal.getUserName());
+            holder.title.setText(journal.getTitle());
 
-        String imgUrl = journal.getImgUrl();
-        Glide.with(context).load(imgUrl).fitCenter().into(holder.imgUrl);
+            String imgUrl = journal.getImgUrl();
+            Glide.with(context).load(imgUrl).fitCenter().into(holder.imgUrl);
 
-        holder.description.setText(journal.getDescription());
+            holder.description.setText(journal.getDescription());
 
-        String timeAgo = String.valueOf(DateUtils.getRelativeTimeSpanString(journal.getTimeAdded().getSeconds() * 1000));
-        holder.timeAdded.setText(timeAgo);
+            String timeAgo = String.valueOf(DateUtils.getRelativeTimeSpanString(journal.getTimeAdded().getSeconds() * 1000));
+            holder.timeAdded.setText(timeAgo);
+        }
     }
+
 
     @Override
     public int getItemCount() {
