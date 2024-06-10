@@ -28,6 +28,8 @@
 
     <androidx.appcompat.widget.Toolbar
         android:id="@+id/journal_list_toolbar"
+        app:titleTextColor="@android:color/white"
+        app:titleTextAppearance="@style/ToolbarTitleText"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="44dp"

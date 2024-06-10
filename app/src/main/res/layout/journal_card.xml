@@ -10,6 +10,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:gravity="start"
+        android:layout_margin="10dp"
         android:orientation="horizontal"
         android:padding="5dp">
 
@@ -18,7 +19,8 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="User Id"
-            android:textSize="20sp"
+            android:textSize="15sp"
+            android:textStyle="italic"
             tools:ignore="HardcodedText" />
 
         <TextView
@@ -28,7 +30,8 @@
             android:layout_marginStart="20dp"
             android:layout_toRightOf="@id/journal_user_id"
             android:text="User Name"
-            android:textSize="20dp"
+            android:textSize="15sp"
+            android:textStyle="italic"
             tools:ignore="HardcodedText,RtlHardcoded,SpUsage,TextSizeCheck" />
 
         <ImageView
@@ -51,6 +54,7 @@
             android:id="@+id/journal_title"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:layout_margin="10dp"
             android:text="Title"
             android:textSize="20sp"
             tools:ignore="HardcodedText" />
@@ -61,6 +65,7 @@
             android:layout_height="wrap_content"
             android:layout_below="@id/journal_title"
             android:layout_marginTop="10dp"
+            android:layout_margin="10dp"
             android:adjustViewBounds="true"
             android:cropToPadding="true"
             android:scaleType="fitXY"
@@ -72,6 +77,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_below="@id/journal_img_url"
+            android:layout_margin="10dp"
             android:layout_marginTop="10dp"
             android:text="Description..."
             android:textSize="20sp"
@@ -80,11 +86,12 @@
         <TextView
             android:id="@+id/journal_time_added"
             android:layout_width="match_parent"
+            android:layout_margin="10dp"
             android:layout_height="wrap_content"
             android:layout_below="@id/journal_description"
             android:layout_marginTop="10dp"
             android:text="Time added"
-            android:textSize="20sp"
+            android:textSize="15sp"
             android:textStyle="italic"
             tools:ignore="HardcodedText,VisualLintBounds" />
     </RelativeLayout>
